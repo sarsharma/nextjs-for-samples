@@ -1,4 +1,4 @@
-name: Azure Static Web Apps CI/CD
+name: basic export private
 
 on:
   push:
@@ -21,6 +21,8 @@ jobs:
       - name: Build And Deploy
         id: builddeploy
         uses: vivekjilla/staticstiesactionoryx@master
+        env:
+          ENABLE_PREVIEW_FEATURES: true
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_JOLLY_ROCK_02F399A12 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
